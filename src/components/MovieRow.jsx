@@ -3,10 +3,20 @@ import Movie from './Movie'
 
 const MovieRow = () => {
 
-    let movie1 = {
+    let movieData = [
+      {
         heading: "movie1 rr",
         image :"https://images.template.net/wp-content/uploads/2018/11/Film-Poster-Template.jpg"
-    }
+    },
+    {
+      heading: "movie2",
+      image :"https://images.template.net/wp-content/uploads/2018/11/Film-Poster-Template.jpg"
+  },
+  {
+    heading: "movie3",
+    image :"https://images.template.net/wp-content/uploads/2018/11/Film-Poster-Template.jpg"
+},
+  ]
 
   return (
     <div>
@@ -15,7 +25,11 @@ const MovieRow = () => {
 
         {/* card */}
         <div className='flex gap-2 py-5'>
-        <Movie data={movie1} />
+        {
+          movieData.map((item) => (
+            <Movie data={item} />
+          ))
+        }
         
         </div>
     </div>
